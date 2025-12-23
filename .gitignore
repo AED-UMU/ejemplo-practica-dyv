@@ -39,3 +39,10 @@
 
 # debug information files
 *.dwo
+
+resultados.csv
+*.pdf
+
+/tiempos
+/tests_unitarios
+/tests_oraculo
