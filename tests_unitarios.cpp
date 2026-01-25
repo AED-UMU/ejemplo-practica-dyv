@@ -4,40 +4,28 @@
 
 void testPrincipio() {
     std::vector<int> S = {1, 2, 3, 2, 3, 4, 1, 2};
-    int resultado = subsecuenciaMasLargaDyV(S, 0, S.size() - 1);
-    assert(resultado == 3); 
+    assert(busquedaDyV(S, 0, S.size() - 1, 1));
 }
 
 void testFinal() {
     std::vector<int> S = {1, 2, 3, 2, 3, 4, 1, 2, 1, 2, 3, 4};
-    int resultado = subsecuenciaMasLargaDyV(S, 0, S.size() - 1);
-    assert(resultado == 4); 
+    assert(busquedaDyV(S, 0, S.size() - 1, 4));
 }
 
 void testMitad() {
     std::vector<int> S = {1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4};
-    int resultado = subsecuenciaMasLargaDyV(S, 0, S.size() - 1);
-    assert(resultado == 6);
+    assert(busquedaDyV(S, 0, S.size() - 1, 3));
 }
 
-void testDecreciente() {
+void testNoEsta() {
     std::vector<int> S = {5, 4, 3, 2, 1};
-    int resultado = subsecuenciaMasLargaDyV(S, 0, S.size() - 1);
-    assert(resultado == 1); 
+    assert(!busquedaDyV(S, 0, S.size() - 1, 6));
 }
-
-void testCreciente() {
-    std::vector<int> S = {1, 2, 3, 4, 5};
-    int resultado = subsecuenciaMasLargaDyV(S, 0, S.size() - 1);
-    assert(resultado == 5); 
-}
-
 int main() {
     testPrincipio();
     testMitad();
     testFinal();
-    testDecreciente();
-    testCreciente();
+    testNoEsta();
     std::cout << "Todos los tests pasaron!" << std::endl;
     return 0;
 }

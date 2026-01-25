@@ -2,6 +2,6 @@
 
 #include <vector>
 
-int subsecuenciaMasLargaDyV(const std:: vector<int>& S, int p, int q);
+bool busquedaDyV(const std::vector<int>& S, int p, int q, int v);
 
-int subsecuenciaMasLargaIterativo(const std:: vector<int>& S);
+bool busquedaIterativo(const std:: vector<int>& S, int v);

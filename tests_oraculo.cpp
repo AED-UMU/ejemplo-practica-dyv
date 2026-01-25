@@ -18,6 +18,8 @@ vector<int> generarSecuenciaAleatoria(int longitud, int minimo, int maximo, unsi
 
     return secuencia;
 }
+
+
 int main() {
     unsigned int semilla = 42;
     int minimo = 0;
@@ -28,13 +30,20 @@ int main() {
     for (size_t i = 0; i < longitudes.size(); ++i) {
         int longitud = longitudes[i];
         vector<int> secuencia = generarSecuenciaAleatoria(longitud, minimo, maximo, semilla + i);
-        int dyvOutput = subsecuenciaMasLargaDyV(secuencia, 0, secuencia.size() - 1);
-        int resultadoIterativo = subsecuenciaMasLargaIterativo(secuencia);
+
+        for (int val : secuencia) {
+            bool dyvOutput = busquedaDyV(secuencia, 0, secuencia.size() - 1, val);
+            bool resultadoIterativo = busquedaIterativo(secuencia, val);
+            assert(dyvOutput == resultadoIterativo);
+        }
+        
+        int valorNoPresente = maximo + 1;
+        bool dyvOutput = busquedaDyV(secuencia, 0, secuencia.size() - 1, valorNoPresente);
+        bool resultadoIterativo = busquedaIterativo(secuencia, valorNoPresente);
+        assert(dyvOutput == resultadoIterativo);
         
         cout << "Longitud de la secuencia: " << longitud << endl;
-        cout << "Resultado DyV: " << dyvOutput << endl;
-        cout << "Resultado Iterativo: " << resultadoIterativo << endl;
-        assert(dyvOutput == resultadoIterativo);
+        cout << "Test de búsqueda completado exitosamente." << endl;
     }
 
     return 0;
