@@ -13,4 +13,4 @@ dyv.o: dyv.cpp dyv.h
 	g++ -c dyv.cpp
 
 clean:
-	rm -f *.o tests_unitarios tests_oraculo tiempos
+	rm -f *.o tests_unitarios tests_oraculo tiempos *.pdf *.csv

@@ -1,8 +1,8 @@
-# Ejemplo práctica DyV
+# 📊 Ejemplo práctica DyV
 
 Pequeña práctica ejemplo de Divide y Vencerás (DyV) en C++ para calcular la longitud de la subsecuencia no estrictamente creciente contigua más larga, con pruebas, generación de tiempos y un script de regresión/visualización en Python.
 
-## Estructura
+## 📁 Estructura
 
 - `dyv.h`, `dyv.cpp`: implementación del algoritmo (DyV e iterativo).
 - `tests_unitarios.cpp`: tests unitarios básicos sobre casos representativos.
@@ -11,7 +11,7 @@ Pequeña práctica ejemplo de Divide y Vencerás (DyV) en C++ para calcular la l
 - `regresion.py`: realiza regresión lineal y guarda gráficas en PDF a partir de `resultados.csv`.
 - `makefile`: reglas de compilación y limpieza.
 
-## Requisitos
+## ⚙️ Requisitos
 
 Herramientas del sistema (Linux):
 
@@ -41,7 +41,7 @@ source .venv/bin/activate
 pip install pandas numpy matplotlib scipy
 ```
 
-## Compilación (C++)
+## 🔨 Compilación (C++)
 
 Compilar todo (tests y tiempos):
 
@@ -56,7 +56,7 @@ Objetivos disponibles:
 - `make tiempos`         → binario `./tiempos`
 - `make clean`           → borrar objetos y binarios
 
-## Ejecución
+## ▶️ Ejecución
 
 Ejecutar tests unitarios:
 
@@ -77,7 +77,7 @@ Generar tiempos y CSV (mejor/peor caso):
 ls -l resultados.csv
 ```
 
-## Análisis y gráficas (opcional)
+## 📈 Análisis y gráficas (opcional)
 
 Con `resultados.csv` generado, lanzar el script de regresión y guardar gráficas en PDF:
 
@@ -90,7 +90,7 @@ El script imprime métricas (pendiente, $R^2$, $MSE$, etc.) y crea los ficheros:
 - `scatter_plot_log.pdf`, `ajuster_mejor_log.pdf`, `ajuster_peor_log.pdf`
 - `scatter_plot.pdf`, `ajuster_mejor.pdf`, `ajuster_peor.pdf`
 
-## Limpieza
+## 🧹 Limpieza
 
 ```bash
 make clean
