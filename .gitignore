@@ -42,6 +42,7 @@
 
 resultados.csv
 *.pdf
+!memoria.pdf
 
 /tiempos
 /tests_unitarios
